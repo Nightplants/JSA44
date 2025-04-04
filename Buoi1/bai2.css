@@ -1,0 +1,26 @@
+.box {
+  border: 1px solid red;
+  width: 65ch;
+  height: 65vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.l {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.b {
+  background-color: red;
+  width: 80px;
+  height: 80px;
+}
+
+.e {
+  background-color: white;
+  width: 80px;
+  height: 80px;
+}

@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.firstlayer,
+.secondlayer,
+.thirdlayer {
+  display: flex;
+  justify-self: center;
+}
+
+.box{
+  width: 100px;
+  height: 100px;
+  margin: 70px;
+  background-color: gray;
+}
+
+.firstlayer :first-child,
+.firstlayer :last-child,
+.thirdlayer :last-child,
+.thirdlayer :first-child {
+  border-radius: 50%;
+}
