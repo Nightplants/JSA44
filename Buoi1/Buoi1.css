@@ -22,7 +22,7 @@ body {
   width: 100px;
   height: 100px;
   margin: 70px;
-  background-color: gray;
+  background-color: linear-gradient(90deg, #00ff3c, #0055ff);
 }
 
 .firstlayer :first-child,
