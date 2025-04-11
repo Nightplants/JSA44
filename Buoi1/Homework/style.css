@@ -21,11 +21,20 @@ body {
   margin: -1px;
 }
 
+.extra :first-child{
+  margin-left: -20px;
+}
+
+.extra :last-child{
+  margin-right: -20px;
+  width: 85px !important;
+}
+
 .phone_card {
   width: 250px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
-  padding: 5px 20px;
+  padding: 0 20px 5px;
 }
 
 .phone_card .extra :last-child {
