@@ -67,7 +67,8 @@ p {
 }
 
 .extra img {
-  width: 250px;
+  height: 250px;
+  width: auto;
 }
 
 .extra div {
@@ -91,6 +92,6 @@ p {
   color: transparent;
 }
 
-.top2 img {
+.right img {
     margin-right: -50px;
 }

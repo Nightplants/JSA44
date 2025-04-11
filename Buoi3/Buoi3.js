@@ -1,8 +1,26 @@
-console.log("Javascript")
+//Bài 1:
+alert("Bài 1");
+N = prompt();
+alert(N * 2);
 
-let friends = 34
-let name = "Trịnh Bảo Huy"
-let age = 11
-let school = "Tiểu học Lômônôxốp"
+//Bài 2:
+alert("Bài 2");
+A = prompt();
+B = prompt();
+C = prompt();
+alert((A - B) * C);
 
-console.log("Tôi tên là " + name + ", năm nay tôi " + age + ". Tôi đang học ở trường " + school + ". Tôi có " + friends + "người bạn thân.")
+//Bài 7:
+alert("Bài 7");
+A = prompt();
+B = prompt();
+alert((A + B) + (A * B));
+
+//Bài 11:
+alert("Bài 11");
+a = prompt();
+b = prompt();
+c = prompt();
+let p = (a + b + c) / 2;
+let s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+alert(s);
