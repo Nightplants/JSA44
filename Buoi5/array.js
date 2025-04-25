@@ -1,1 +1,36 @@
-hostile_mobs = ["zombie", "skeleton", "creeper", "enderman", "piglin", "blaze", "witch", "phantom",];
+hostile_mobs = [
+  (overworld = [
+    "zombie",
+    "skeleton",
+    "creeper",
+    "enderman",
+    "witch",
+    "phantom",
+    "pillager",
+    "slime",
+    "silverfish",
+    "drowned",
+    "guardian",
+    "evoker",
+    "vindicator",
+    "ravager",
+    "vex",
+    "stray",
+    "zombified_piglin",
+    "warden",
+  ]),
+  (nether = [
+    "piglin",
+    "blaze",
+    "ghast",
+    "magma_cube",
+    "piglin_brute",
+    "wither_skeleton",
+    "endermite",
+    "enderman",
+  ]),
+  (theEnd = ["endermite", "enderman", "shulker"]),
+  (bosses = ["wither", "ender_dragon"]),
+];
+
+console.log(hostile_mobs);
