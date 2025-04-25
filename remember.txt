@@ -1,0 +1,20 @@
+Liên kết repo trên git vào Folder trong máy:
+ - git init
+ - git add .
+ - git commit -m "new commit"
+ - git remote add origin <link repo trên github>
+ - git push origin main (phụ thuộc vào nhánh hiện tại)
+
+Clone code từ 1 repo trên git:
+ - git clone <link repo cần clone>
+
+Update lại code lên git hub:
+ - git add . => Add toàn bộ file lên git
+ - git commit -m "nội dung thay đổi" => Ghi tóm tắt nội dung thay đổi
+ - git push origin <nhánh hiện tại>
+
+Deploy:
+ - Tạo 1 thư mục trống
+ - File index.html phải đặt trực tiếp trong Folder mới tạo
+ - Tạo 1 repo mới trên git hub, nên để tên repo giống với tên Folder vừa tạo ở máy
+ - Up code từ máy lên repo

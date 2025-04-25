@@ -1,0 +1,1 @@
+hostile_mobs = ["zombie", "skeleton", "creeper", "enderman", "piglin", "blaze", "witch", "phantom",];
