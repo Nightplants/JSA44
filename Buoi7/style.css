@@ -1,0 +1,10 @@
+.container {
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  flex-direction: column;
+  justify-content: center;
+  background-color: aquamarine;
+}
