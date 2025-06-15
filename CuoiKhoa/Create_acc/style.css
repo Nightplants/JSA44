@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  margin-top: 12%;
+  margin-top: 10%;
   backdrop-filter: invert(80%);
   border: 4px rgb(50, 135, 255) solid;
   border-radius: 10px;
@@ -47,14 +47,14 @@ body {
   color: rgba(250, 235, 215, 0.4);
 }
 
-.container p{
+.container p {
   font-size: large;
   text-align: left;
   display: inline;
   margin-top: 0;
 }
 
-p a{
+p a {
   color: rgb(255, 170, 52);
 }
 
@@ -62,8 +62,9 @@ p a:hover {
   color: rgb(212, 124, 0);
 }
 
-.container .sign_in {
-  width: 120px;
+.container .create_acc {
+  width: max-content;
+  padding: 0 30px;
   height: 40px;
   font-size: 22px;
   border-radius: 5px;
@@ -71,7 +72,7 @@ p a:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.container .sign_in:hover,
+.container .create_acc:hover,
 input:hover {
   background: rgba(255, 255, 255, 0.475);
 }
