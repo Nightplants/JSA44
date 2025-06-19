@@ -29,6 +29,6 @@ create_acc.addEventListener("click", function (e) {
     username.value = "";
     password.value = "";
     repassword.value = "";
-    window.location.href = "/CuoiKhoa/Sign_in/index.html";
+    window.location.href = "/CuoiKhoa/Home/index.html";
   }
 });
