@@ -1,2 +1,2 @@
-const welcome = document.getElementsByClassName(".welcome")
-welcome.innerHTML = `Welcome ${localStorage.getItem("Username")}`
+const welcome = document.querySelector(".welcome")
+welcome.textContent = `Welcome, ${localStorage.getItem("Username")}!`
