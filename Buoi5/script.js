@@ -1,13 +1,13 @@
 // let person1 = {
-//   name: "John",
+//   name: `John`,
 //   age: 30,
-//   gender: "male",
+//   gender: `male`,
 // };
 
 // let person2 = {
-//   name: "Jane",
+//   name: `Jane`,
 //   age: 22,
-//   gender: "female",
+//   gender: `female`,
 // };
 
 // alert(
@@ -24,11 +24,11 @@
 // }
 
 // let student = {
-//   name: "Trịnh Bảo Huy",
+//   name: `Trịnh Bảo Huy`,
 //   age: 11,
-//   favourite: "Minecraft",
+//   favourite: `Minecraft`,
 //   class: {
-//     name: "5A8",
+//     name: `5A8`,
 //     members: 22,
 //   },
 // };

@@ -19,15 +19,15 @@
 
 //Test
 alert(`Bài 1`);
-var string = "";
+var string = ``;
 for (let i = 1; i <= 10; i++) {
-  string += i + " ";
+  string += i + ` `;
 }
 alert(string);
 
 alert(`Bài 2`);
-let a = Number(prompt("Nhập số a: "));
-let b = Number(prompt("Nhập số b: "));
+let a = Number(prompt(`Nhập số a: `));
+let b = Number(prompt(`Nhập số b: `));
 let sum = 0;
 for (let i = a; i <= b; i++) {
   sum += i;
@@ -35,7 +35,7 @@ for (let i = a; i <= b; i++) {
 alert(`Tổng từ ${a} đến ${b} là: ${sum}`);
 
 alert(`Bài 3`);
-let n = Number(prompt("Nhập số n: "));
+let n = Number(prompt(`Nhập số n: `));
 let product = 1;
 for (let i = 1; i <= n; i++) {
   product *= i;
@@ -43,13 +43,13 @@ for (let i = 1; i <= n; i++) {
 alert(`Giai thừa của ${n} là: ${product}`);
 
 alert(`Bài 4`);
-var string = "";
-let line = "";
+var string = ``;
+let line = ``;
 for (let i = 1; i <= 9; i++) {
-  line += i + " ";
+  line += i + ` `;
   if (i % 3 === 0) {
-    string += line + "\n";
-    line = "";
+    string += line + `\n`;
+    line = ``;
   }
 }
 alert(string);

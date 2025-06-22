@@ -14,10 +14,10 @@ if (n > 60) {
 }
 
 if (String(hours).length == 1) {
-  hours = "0" + String(hours);
+  hours = `0` + String(hours);
 }
 if (String(minutes).length == 1) {
-  minutes = "0" + String(minutes);
+  minutes = `0` + String(minutes);
 }
 
 alert(`${hours}:${minutes}:${n}`);

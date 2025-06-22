@@ -30,7 +30,7 @@ alert(numbers)
 
 alert(`Bài 6`)
 function reverseString(input) {
-    return input.split('').reverse().join('');
+    return input.split(``).reverse().join(``);
 } 
 Z = prompt(`Nhập chuỗi Z: `)
 alert(reverseString(Z))
@@ -46,7 +46,7 @@ alert(letter.toUpperCase())
 
 alert(`Bài 9`)
 function circularShift(letter, n) {
-    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    const alphabet = `abcdefghijklmnopqrstuvwxyz`;
     const startIndex = alphabet.indexOf(letter);
     const shiftedIndex = (startIndex + n) % 26;
     return alphabet[shiftedIndex];
@@ -57,7 +57,7 @@ alert(circularShift(A, N))
 
 alert(`Bài 10`)
 function circularShift(letter) {
-    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    const alphabet = `abcdefghijklmnopqrstuvwxyz`;
     const startIndex = alphabet.indexOf(letter);
     const shiftedIndex = (startIndex) % 26;
     return alphabet[shiftedIndex];

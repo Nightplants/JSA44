@@ -10,9 +10,9 @@ alert(sum);
 
 alert(`Bài 2`);
 const students = [
-  { name: "An", score: 8 },
-  { name: "Bình", score: 9 },
-  { name: "Châu", score: 7 },
+  { name: `An`, score: 8 },
+  { name: `Bình`, score: 9 },
+  { name: `Châu`, score: 7 },
 ];
 var highestScore = 0;
 for (let i = 0; i < students.length; i++) {
@@ -24,9 +24,9 @@ alert(highestScore);
 
 alert(`Bài 3`);
 const products = [
-  { name: "Sách", quantity: 3 },
-  { name: "Bút", quantity: 0 },
-  { name: "Thước", quantity: 5 },
+  { name: `Sách`, quantity: 3 },
+  { name: `Bút`, quantity: 0 },
+  { name: `Thước`, quantity: 5 },
 ];
 for (let i = 0; i < products.length; i++) {
   if (products[i].quantity === 0) {
@@ -37,7 +37,7 @@ for (let i = 0; i < products.length; i++) {
 }
 
 alert(`Bài 4`);
-const items = ["cam", "xoài", "cam", "ổi", "cam"];
+const items = [`cam`, `xoài`, `cam`, `ổi`, `cam`];
 var repeated = 0;
 for (let i = 0; i < items.length; i++) {
   for (let j = i + 1; j < items.length; j++) {
@@ -50,9 +50,9 @@ alert(`Có ${repeated} phần tử bị lặp lại`);
 
 alert(`Bài 5`);
 const students2 = [
-  { name: "An", score: 7 },
-  { name: "Bình", score: 8 },
-  { name: "Châu", score: 9 },
+  { name: `An`, score: 7 },
+  { name: `Bình`, score: 8 },
+  { name: `Châu`, score: 9 },
 ];
 var sum = 0;
 for (let i = 0; i < students.length; i++) {
@@ -63,9 +63,9 @@ alert(`Điểm trung bình là: ${average}`);
 
 alert(`Bài 6`);
 const students3 = [
-  { name: "An", score: 7 },
-  { name: "Bình", score: 9 },
-  { name: "Châu", score: 10 },
+  { name: `An`, score: 7 },
+  { name: `Bình`, score: 9 },
+  { name: `Châu`, score: 10 },
 ];
 var higher8 = [];
 for (let i = 0; i < students3.length; i++) {
@@ -86,8 +86,8 @@ alert(obj1);
 
 alert(`Bài 8`);
 const cart = [
-  { name: "Sách", price: 100, quantity: 2 },
-  { name: "Bút", price: 10, quantity: 10 },
+  { name: `Sách`, price: 100, quantity: 2 },
+  { name: `Bút`, price: 10, quantity: 10 },
 ];
 var total = 0;
 for (let i = 0; i < cart.length; i++) {
@@ -98,9 +98,9 @@ alert(`Tổng tiền là: ${total}`);
 
 alert(`Bài 9`);
 const students4 = [
-  { name: "An", score: 7 },
-  { name: "Bình", score: 4 },
-  { name: "Châu", score: 9 },
+  { name: `An`, score: 7 },
+  { name: `Bình`, score: 4 },
+  { name: `Châu`, score: 9 },
 ];
 for (let i = 0; i < students4.length; i++) {
   if (students4[i].score < 5) {
@@ -112,15 +112,15 @@ for (let i = 0; i < students4.length; i++) {
 
 alert(`Bài 10`);
 const students5 = [
-  { name: "An", score: 7 },
-  { name: "Bình", score: 4 },
-  { name: "Châu", score: 9 },
+  { name: `An`, score: 7 },
+  { name: `Bình`, score: 4 },
+  { name: `Châu`, score: 9 },
 ];
 for (let i = 0; i < students5.length; i++) {
   if (students5[i].score < 5) {
-    students5[i]["trang thái"] = "Rớt";
+    students5[i][`trang thái`] = `Rớt`;
   } else {
-    students5[i]["trang thái"] = "Đậu";
+    students5[i][`trang thái`] = `Đậu`;
   }
 }
 console.log(students5);
