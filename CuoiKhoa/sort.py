@@ -27,117 +27,84 @@ def sort_css_properties_by_full_length(css_code: str) -> str:
 # 🧪 Ví dụ sử dụng:
 css_input = """
 * {
-  color: antiquewhite;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: antiquewhite;
 }
 
 body {
-  background-image: url("/CuoiKhoa/src/image/Posting.png");
   display: flex;
-  flex-direction: column;
   justify-content: center;
-}
-
-.texts {
-  position: block;
-  margin: 10px 80px 0;
-  background-color: rgba(0, 0, 0, 0.412);
+  background-image: url(/CuoiKhoa/src/image/Sign-create.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
-  position: relative;
+  margin-top: 10%;
+  backdrop-filter: invert(80%);
+  border: 4px rgb(50, 135, 255) solid;
+  border-radius: 10px;
+  width: 315px;
   display: flex;
-  position: absolute;
-  gap: 10px;
-  overflow-x: auto;
   justify-content: center;
-  flex-wrap: wrap;
-  max-height: 80px;
-  top: 310px;
-  left: 80px;
-  right: 80px;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(20px);
-  border-radius: 20px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.preview {
-  position: relative;
-  width: 120px;
-  height: 80px;
-  overflow: hidden;
-  border-radius: 8px;
+.container h2 {
+  text-align: center;
+  font-size: 35px;
+  display: inline-block;
+  text-align: center;
+  cursor: default;
+}
+
+.container h2:hover {
+  font-size: 40px;
+}
+
+.container input {
+  width: 270px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: larger;
   background: rgba(255, 255, 255, 0.2);
 }
 
-.preview img,
-.preview video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.container input::placeholder {
+  color: rgba(250, 235, 215, 0.4);
 }
 
-.upload {
-  padding: 8px 16px;
-  position: absolute;
+.container p {
   font-size: large;
-  left: 90px;
-  bottom: 245px;
-  border-radius: 30px;
-  background: transparent;
-  backdrop-filter: invert(75%);
-  border-width: 3px;
-  cursor: pointer;
+  text-align: left;
+  display: inline;
+  margin-top: 0;
 }
 
-.upload:hover {
-  background: rgba(255, 255, 255, 0.235);
+p a {
+  color: rgb(255, 170, 52);
 }
 
-.posting {
-  display: block;
-  resize: vertical;
-  height: 180px;
-  position: fixed;
-  bottom: 25px;
-  left: 80px;
-  right: 80px;
-  border-radius: 20px;
-  border: 2px solid black;
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(20px);
-  text-align: justify;
-  padding: 10px 20px;
-  font-size: 25px;
-  border: 3px solid black;
-  scroll-margin-right: 5px;
-  resize: none;
-  cursor: auto;
+p a:hover {
+  color: rgb(212, 124, 0);
 }
 
-.posting::placeholder {
-  color: rgba(250, 235, 215, 0.679);
+.container .create_acc {
+  width: max-content;
+  padding: 0 30px;
+  height: 40px;
+  font-size: 22px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-::-webkit-scrollbar {
-  background-color: transparent;
-  width: 10px;
-  border-radius: 100px;
-  margin-right: 20em;
+.container .create_acc:hover,
+input:hover {
+  background: rgba(255, 255, 255, 0.475);
 }
 
-::-webkit-scrollbar-track {
-  margin-block: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 100px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.4);
-}
 """
 
 print(sort_css_properties_by_full_length(css_input))

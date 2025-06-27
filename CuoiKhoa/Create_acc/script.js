@@ -18,7 +18,7 @@ create_acc.addEventListener(`click`, function (e) {
     alert(`⚠️Please do not blank the inputs!⚠️`);
     return;
   } else if (password.value !== repassword.value) {
-    alert(`⚠️Password and password check don`t the same!⚠️`);
+    alert(`⚠️Password and password check don't the same!⚠️`);
     password.value = ``;
     repassword.value = ``;
     return;
