@@ -1,32 +1,70 @@
-const username = document.querySelector(`.username`);
-const password = document.querySelector(`.password`);
-const sign_in = document.querySelector(`.sign_in`);
-const h2 = document.querySelector(`h2`);
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("loginForm");
+  const usernameInput = form.querySelector('input[type="text"]');
+  const passwordInput = form.querySelector('input[type="password"]');
+  const submitBtn = form.querySelector('button[type="submit"]');
 
-function ChangeColor() {
-  h2.style.color = randomColor({ hue: `orange`, luminosity: `light` });
-}
+  // Tạo khối hiển thị thông báo (sau các input)
+  const messageBox = document.createElement("div");
+  messageBox.className = "message-box";
+  form.insertBefore(messageBox, submitBtn);
 
-sign_in.addEventListener(`click`, function (e) {
-  e.defaultPrevented;
-  if (username.value === `` || password.value === ``) {
-    alert(`⚠️Please do not blank the inputs!⚠️`);
-    return;
-  }
-  const users = { ...localStorage };
-  if (users.Username !== username.value) {
-    alert(
-      `⚠️Don't find any user, please check the username or create a new account!⚠️`
-    );
-    return;
-  } else if (users.Password !== password.value) {
-    alert(`⚠️Wrong password!⚠️`);
-    return;
-  } else {
-    alert(`Sign in complete✅`);
-    localStorage.setItem(`Before?`, `true`);
-    password.value = ``;
-    username.value = ``;
-    window.location.href = `/CuoiKhoa/Home/index.html`;
-  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value.trim();
+    let errorMessage = "";
+    let success = false;
+
+    usernameInput.classList.remove("error");
+    passwordInput.classList.remove("error");
+    messageBox.classList.remove("show", "error", "success");
+
+    if (!username || !password) {
+      errorMessage = "Vui lòng nhập đầy đủ thông tin.";
+      if (!username) usernameInput.classList.add("error");
+      if (!password) passwordInput.classList.add("error");
+    } else {
+      const storedUser = localStorage.getItem("username");
+      const storedPass = localStorage.getItem("password");
+
+      if (!username || !password) {
+        errorMessage = "Vui lòng nhập đầy đủ thông tin.";
+        if (!username) usernameInput.classList.add("error");
+        if (!password) passwordInput.classList.add("error");
+      } else {
+        const storedUser = localStorage.getItem("username");
+        const storedPass = localStorage.getItem("password");
+
+        if (username !== storedUser || password !== storedPass) {
+          errorMessage = "Tài khoản không tồn tại hoặc sai thông tin.";
+          usernameInput.classList.add("error");
+          passwordInput.classList.add("error");
+        } else {
+          messageBox.textContent = "✅ Tạo tài khoản thành công!";
+          messageBox.classList.add("show", "success");
+          setTimeout(() => {
+            window.location.href = "../Home/index.html";
+          }, 1500);
+        }
+      }
+
+      messageBox.textContent = errorMessage;
+      messageBox.classList.add("show", "error");
+    }
+
+    messageBox.textContent = errorMessage;
+    messageBox.classList.add("show");
+    messageBox.classList.add(success ? "success" : "error");
+
+    if (success) {
+      setTimeout(() => {
+        window.location.href = "../Home/index.html";
+      }, 1500);
+    }
+  });
+
+  const last = localStorage.getItem("username");
+  if (last) usernameInput.value = last;
 });

@@ -1,35 +1,54 @@
-const username = document.querySelector(`.username`);
-const password = document.querySelector(`.password`);
-const repassword = document.querySelector(`.repassword`);
-const create_acc = document.querySelector(`.create_acc`);
-const h2 = document.querySelector(`h2`);
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("registerForm");
+  const usernameInput = form.querySelector('input[type="text"]');
+  const passwordInput = form.querySelectorAll('input[type="password"]')[0];
+  const confirmInput = form.querySelectorAll('input[type="password"]')[1];
+  const submitBtn = form.querySelector("button[type='submit']");
 
-function ChangeColor() {
-  h2.style.color = randomColor({ hue: `orange`, luminosity: `light` });
-}
+  const messageBox = document.createElement("div");
+  messageBox.className = "message-box";
+  form.insertBefore(messageBox, submitBtn);
 
-create_acc.addEventListener(`click`, function (e) {
-  e.defaultPrevented;
-  if (
-    username.value === `` ||
-    password.value === `` ||
-    repassword.value === ``
-  ) {
-    alert(`⚠️Please do not blank the inputs!⚠️`);
-    return;
-  } else if (password.value !== repassword.value) {
-    alert(`⚠️Password and password check don't the same!⚠️`);
-    password.value = ``;
-    repassword.value = ``;
-    return;
-  } else {
-    localStorage.setItem(`Username`, username.value);
-    localStorage.setItem(`Password`, password.value);
-    localStorage.setItem(`Before?`, `false`);
-    alert(`Create new account complete✅`);
-    username.value = ``;
-    password.value = ``;
-    repassword.value = ``;
-    window.location.href = `/CuoiKhoa/Home/index.html`;
-  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value.trim();
+    const confirm = confirmInput.value.trim();
+
+    usernameInput.classList.remove("error");
+    passwordInput.classList.remove("error");
+    confirmInput.classList.remove("error");
+    messageBox.classList.remove("show", "error", "success");
+
+    let errorMessage = "";
+    let success = false;
+
+    if (!username || !password || !confirm) {
+      errorMessage = "Vui lòng điền đầy đủ thông tin.";
+      if (!username) usernameInput.classList.add("error");
+      if (!password) passwordInput.classList.add("error");
+      if (!confirm) confirmInput.classList.add("error");
+    } else if (password !== confirm) {
+      errorMessage = "Mật khẩu xác nhận không khớp.";
+      passwordInput.classList.add("error");
+      confirmInput.classList.add("error");
+    } else {
+      // Lưu thông tin vào localStorage
+      localStorage.setItem("username", username);
+      localStorage.setItem("password", password);
+      success = true;
+    }
+
+    if (success) {
+      messageBox.textContent = "✅ Tạo tài khoản thành công!";
+      messageBox.classList.add("show", "success");
+      setTimeout(() => {
+        window.location.href = "../Home/index.html";
+      }, 1500);
+    } else {
+      messageBox.textContent = errorMessage;
+      messageBox.classList.add("show", "error");
+    }
+  });
 });

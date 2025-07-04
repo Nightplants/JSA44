@@ -1,28 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.6.1/randomColor.min.js"
-      integrity="sha512-vPeZ7JCboHcfpqSx5ZD+/jpEhS4JpXxfz9orSvAPPj0EKUVShU2tgy7XkU+oujBJKnWmu4hU7r9MMQNWPfXsYw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in</title>
+    <title>Đăng nhập</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h2 onmouseover="ChangeColor()">Sign in</h2>
-      <input class="username" type="text" placeholder="Username" /> <br />
-      <input class="password" type="password" placeholder="Password" /> <br />
-      <p>
-        Don't have an account? <br />
-        <a href="/CuoiKhoa/Create_acc/index.html">Create an account</a> now!
-      </p>
-      <button class="sign_in" type="submit">Sign in</button>
-      <script src="script.js"></script>
+    <div class="login-container">
+      <h2>Đăng nhập</h2>
+      <form id="loginForm">
+        <input type="text" placeholder="Tên đăng nhập" required />
+        <input type="password" placeholder="Mật khẩu" required />
+        <button type="submit">Đăng nhập</button>
+      </form>
+      <div class="register-link">
+        Chưa có tài khoản? <a href="../Create_acc/index.html">Đăng ký</a>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
