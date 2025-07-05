@@ -1,60 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Cá Nhân</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang cá nhân</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <menu>
-        <nav>
-            <ul>
-                <li><a href="../Home/index.html">Trang chủ</a></li>
-                <li><a href="../Places/index.html">Khám phá địa điểm</a></li>
-                <li><a href="../Post/index.html">Đăng bài viết</a></li>
-                <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
-                <li>
-                    <a href="../Profile/index.html" id="adminProfile">
-                        <img src="../src/image/admin.png" alt="Admin" class="admin-icon">
-                    </a>
-                </li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="../Home/index.html">Trang chủ</a></li>
+          <li><a href="../Places/index.html">Khám phá địa điểm</a></li>
+          <li><a href="../Post/index.html">Đăng bài viết</a></li>
+          <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
+        </ul>
+      </nav>
     </menu>
-    <div class="profile-container">
-        <div class="profile-header">
-            <img src="../src/image/admin.png" alt="Profile Picture" class="profile-pic">
-            <h1>Trang Cá Nhân</h1>
-        </div>
-        <div class="profile-info">
-        <div class="profile-card">
-            <h2>Thông tin cá nhân</h2>
-            <div class="profile-field">
-                <span class="field-label">Tên người dùng:</span>
-                <span class="field-value" id="usernameDisplay"></span>
-            </div>
-            <div class="profile-field">
-                <span class="field-label">Số bài viết:</span>
-                <span class="field-value" id="postCount">0</span>
-            </div>
-            <h2 class="stats-header">Thống kê hoạt động</h2>
-        <div class="activity-grid">
-                <div class="activity-card">
-                    <div class="activity-icon">📝</div>
-                    <div class="activity-text">Bài viết gần đây</div>
-                </div>
-                <div class="activity-card">
-                    <div class="activity-icon">📍</div>
-                    <div class="activity-text">Địa điểm đã ghé</div>
-                </div>
-                <div class="activity-card">
-                    <div class="activity-icon">❤️</div>
-                    <div class="activity-text">Lượt thích</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="profile.js"></script>
-</body>
+
+    <section class="profile">
+      <div class="avatar-container">
+        <img src="../src/image/admin.png" alt="Avatar" class="avatar" />
+      </div>
+      <h1 class="username">Tên người dùng</h1>
+
+      <div class="message-box" id="messageBox"></div>
+
+      <p class="bio">
+        Chào mừng bạn đến với trang cá nhân của mình! Hãy chia sẻ những khoảnh
+        khắc mùa hè đáng nhớ và kết nối với bạn bè.
+      </p>
+      <div class="personal-info">
+        <h2>Thông tin cá nhân</h2>
+        <ul>
+          <li>
+            <strong>Email:</strong> <span id="email">user@email.com</span>
+          </li>
+          <li>
+            <strong>Thành viên từ:</strong> <span id="memberSince">2020</span>
+          </li>
+          <li>
+            <strong>Địa điểm yêu thích:</strong>
+            <span id="favoritePlace">Đà Nẵng</span>
+          </li>
+        </ul>
+      </div>
+      <div class="user-posts">
+        <h2>Bài viết của bạn</h2>
+        <ul id="postList">
+          <li>Chưa có bài viết nào.</li>
+        </ul>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>

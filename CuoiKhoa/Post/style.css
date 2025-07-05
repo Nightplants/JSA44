@@ -5,6 +5,11 @@
 
 body {
   background-image: url("/CuoiKhoa/src/image/Posting.png");
+  padding-top: 120px; /* Thêm padding để tránh menu che nội dung */
+}
+
+.post-title, .post-form, .post-wrapper {
+  margin-top: 30px;
 }
 
 .post-wrapper {
@@ -12,6 +17,8 @@ body {
   display: flex;
   padding: 15px;
   margin: 20px 80px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   border-radius: 16px;
   flex-direction: column;
   backdrop-filter: blur(20px);
@@ -140,4 +147,57 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.4);
+}
+
+menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 81.5%;
+  height: 90px;
+  margin-bottom: 40px;
+  border-radius: 0 0 20px 20px;
+  backdrop-filter: blur(10px) invert(80%);
+  box-shadow: 0px 20px 38px 9px rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+menu nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+menu nav ul li a {
+  color: antiquewhite;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+menu nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.admin-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 110px;
+  }
+  .post-title, .post-form, .post-wrapper {
+    margin-top: 20px;
+  }
 }

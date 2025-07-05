@@ -7,22 +7,41 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container"></div>
-    <button class="upload">Thêm ảnh hoặc video</button>
-    <button class="post">></button>
-    <textarea
-      name=""
-      class="posting"
-      placeholder="Viết gì đó vào đây..."
-    ></textarea>
-    <button>Quay lại</button>
-    <input
-      type="file"
-      class="fileInput"
-      accept="image/*,video/*"
-      style="display: none"
-      multiple
-    />
+    <menu>
+      <nav>
+        <ul>
+          <li><a href="../Home/index.html">Trang chủ</a></li>
+          <li><a href="../Places/index.html">Khám phá địa điểm</a></li>
+          <li><a href="../Post/index.html">Đăng bài viết</a></li>
+          <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
+          <li>
+            <a href="../Personal/index.html" id="adminProfile">
+              <img src="../src/image/admin.png" alt="Admin" class="admin-icon" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </menu>
+    <form class="post-form">
+      <div class="container"></div>
+      <textarea
+        class="posting"
+        placeholder="Viết gì đó vào đây..."
+        rows="5"
+      ></textarea>
+      <div class="post-actions">
+        <button type="button" class="upload">Thêm ảnh hoặc video</button>
+        <input
+          type="file"
+          class="fileInput"
+          accept="image/*,video/*"
+          style="display: none"
+          multiple
+        />
+        <button type="submit" class="post">Đăng bài</button>
+      </div>
+    </form>
+    <div class="posts-container"></div>
     <script src="script.js"></script>
   </body>
 </html>
