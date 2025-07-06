@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,35 +12,47 @@
         <ul>
           <li><a href="../Home/index.html">Trang chủ</a></li>
           <li><a href="../Places/index.html">Khám phá địa điểm</a></li>
-          <li><a href="../Post/index.html">Đăng bài viết</a></li>
+          <li><a href="#">Đăng bài viết</a></li>
           <li><a href="#" id="logoutBtn">Đăng xuất</a></li>
           <li>
             <a href="../Personal/index.html" id="adminProfile">
-              <img src="../src/image/admin.png" alt="Admin" class="admin-icon" />
+              <img
+                src="../src/image/admin.png"
+                alt="Admin"
+                class="admin-icon"
+              />
             </a>
           </li>
         </ul>
       </nav>
     </menu>
+
+    <h2 class="post-title">Tạo bài viết mới</h2>
     <form class="post-form">
-      <div class="container"></div>
+      <div class="user-bar">
+        <img src="../src/image/admin.png" alt="avatar" class="avatar" />
+        <span class="username">Admin</span>
+      </div>
       <textarea
         class="posting"
-        placeholder="Viết gì đó vào đây..."
+        placeholder="Bạn đang nghĩ gì?"
         rows="5"
       ></textarea>
+      <div class="container"></div>
       <div class="post-actions">
+        <span class="media-count">0 media</span>
         <button type="button" class="upload">Thêm ảnh hoặc video</button>
         <input
           type="file"
           class="fileInput"
           accept="image/*,video/*"
-          style="display: none"
           multiple
+          hidden
         />
         <button type="submit" class="post">Đăng bài</button>
       </div>
     </form>
+
     <div class="posts-container"></div>
     <script src="script.js"></script>
   </body>

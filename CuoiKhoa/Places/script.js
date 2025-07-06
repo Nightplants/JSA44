@@ -38,3 +38,14 @@ searchInput.addEventListener("input", function () {
         : "none";
   });
 });
+
+const logoutButton = document.getElementById("logoutBtn");
+if (logoutButton) {
+  logoutButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (confirm("Bạn có chắc chắn muốn đăng xuất không?")) {
+      alert("Bạn đã đăng xuất thành công!");
+      window.location.href = "../Sign_in/index.html";
+    }
+  });
+}
