@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const welcomeElement = document.querySelector(`.welcome`);
   const logoutButton = document.getElementById(`logoutBtn`);
-
   const username = localStorage.getItem(`username`);
 
   if (username) {
@@ -13,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  
   if (logoutButton) {
     logoutButton.addEventListener(`click`, function (e) {
       e.preventDefault();

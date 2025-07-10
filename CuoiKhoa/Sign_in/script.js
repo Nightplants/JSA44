@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const passwordInput = form.querySelector('input[type="password"]');
   const submitBtn = form.querySelector('button[type="submit"]');
 
-  // Tạo khối hiển thị thông báo (sau các input)
   const messageBox = document.createElement("div");
   messageBox.className = "message-box";
   form.insertBefore(messageBox, submitBtn);
@@ -42,11 +41,14 @@ document.addEventListener("DOMContentLoaded", function () {
           usernameInput.classList.add("error");
           passwordInput.classList.add("error");
         } else {
-          messageBox.textContent = "✅ Tạo tài khoản thành công!";
+          messageBox.textContent = "✅ Đăng nhập thành công!";
           messageBox.classList.add("show", "success");
           setTimeout(() => {
             window.location.href = "../Home/index.html";
+            usernameInput.textContent = ``;
+            passwordInput.textContent = ``;
           }, 1500);
+          return;
         }
       }
 
@@ -57,14 +59,5 @@ document.addEventListener("DOMContentLoaded", function () {
     messageBox.textContent = errorMessage;
     messageBox.classList.add("show");
     messageBox.classList.add(success ? "success" : "error");
-
-    if (success) {
-      setTimeout(() => {
-        window.location.href = "../Home/index.html";
-      }, 1500);
-    }
   });
-
-  const last = localStorage.getItem("username");
-  if (last) usernameInput.value = last;
 });
