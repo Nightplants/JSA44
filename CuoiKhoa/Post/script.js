@@ -3,6 +3,9 @@ const upload = document.querySelector(".upload");
 const container = document.querySelector(".container");
 const fileInput = document.querySelector(".fileInput");
 const mediaCount = document.querySelector(".media-count");
+const username = document.querySelector(".username");
+
+username.textContent = localStorage.getItem("username") || "Tên người dùng";
 
 upload.addEventListener("click", () => {
   fileInput.click();
